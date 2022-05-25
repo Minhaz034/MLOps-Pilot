@@ -23,7 +23,7 @@ class FeaturesView(viewsets.ModelViewSet):
 
 def status(df):
     try:
-        model = joblib.load("DjangoAPI/api/xgb_small_model.sav")
+        model = joblib.load("/home/aci/PycharmProjects/MLOps-Pilot/DjangoAPI/api/xgb_small_model.sav")
         X = df
         pred = model.predict(X)
         return pred
@@ -69,7 +69,7 @@ def FormView(request):
             return  render(request,'status.html',{"data":result})
 
     form = FeatureForm()
-    return (request,'form.html',{'form':form})
+    return render(request,'form.html',{'form':form})
 
 
 
