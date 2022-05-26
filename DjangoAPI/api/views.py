@@ -31,6 +31,14 @@ def status(df):
         return Response(e.args[0], status.HTTP_400_BAD_REQUEST)
 
 
+def HomeView(request):
+    return render(request,'home.html')
+
+
+def DBView(request):
+    pass
+
+
 def FormView(request):
     if request.method == 'POST':
         form = FeatureForm(request.POST or None)

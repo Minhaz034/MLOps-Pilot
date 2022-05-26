@@ -3,5 +3,5 @@ from .models import Features
 
 class FeaturesSerializer(serializers.ModelSerializer):
     class meta:
-        model= Features
-        fields='__all__'
+        model = Features
+        fields ='__all__'
